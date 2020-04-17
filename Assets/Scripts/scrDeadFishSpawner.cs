@@ -17,6 +17,6 @@ public class scrDeadFishSpawner : MonoBehaviour
     }
     public void SpawnDeadStuff()
     {
-        
+        //for ()
     }
 }
