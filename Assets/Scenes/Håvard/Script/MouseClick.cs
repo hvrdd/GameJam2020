@@ -17,8 +17,12 @@ public class MouseClick : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.name);
                 hit.collider.attachedRigidbody.AddForce(Vector2.up);
+                
             }
-            
+            if (hit.collider)
+            {
+                Destroy(hit.collider.gameObject);
+            }
         }
     }
 

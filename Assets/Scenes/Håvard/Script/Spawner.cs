@@ -15,9 +15,11 @@ public class Spawner : MonoBehaviour
 
     public float CurrentX;
 
-    public GameObject Ball;
+    public GameObject Object1, Object2, Object3, ObjectToSpawn;
 
     public float score;
+
+    public int random;
 
     private void Start()
     {
@@ -26,6 +28,19 @@ public class Spawner : MonoBehaviour
     public void Update()
     {
         CurrentX = (transform.position.x);
+        random = Random.Range(1, 3);
+        if(random == 1)
+        {
+            ObjectToSpawn = Object1;
+        }
+        else if (random == 2)
+        {
+            ObjectToSpawn = Object2;
+        }
+        else if (random == 3)
+        {
+            ObjectToSpawn = Object2;
+        }
     }
 
 
@@ -47,7 +62,8 @@ public class Spawner : MonoBehaviour
 
     void SpawnBall()
     {
-        Instantiate(Ball, transform.localPosition, Quaternion.identity);
+
+        Instantiate(ObjectToSpawn, transform.localPosition, Quaternion.identity);
 
     }
 
