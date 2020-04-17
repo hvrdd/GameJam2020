@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
 
     public float CurrentX;
 
-    public GameObject Object1, Object2, Object3, ObjectToSpawn;
+    public GameObject Object1, Object2, Object3,Object4, ObjectToSpawn;
 
     public float score;
 
@@ -28,7 +28,7 @@ public class Spawner : MonoBehaviour
     public void Update()
     {
         CurrentX = (transform.position.x);
-        random = Random.Range(1, 3);
+        random = Random.Range(1, 5);
         if(random == 1)
         {
             ObjectToSpawn = Object1;
@@ -39,8 +39,13 @@ public class Spawner : MonoBehaviour
         }
         else if (random == 3)
         {
-            ObjectToSpawn = Object2;
+            ObjectToSpawn = Object3;
         }
+        else if (random == 4)
+        {
+            ObjectToSpawn = Object4;
+        }
+        
     }
 
 
